@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+</head>
+
+<body>
+
+    <div class="bulb" id="bulb"></div>
+    <button onclick="BulbOn()">On</button>
+    <button onclick="BulbOff()">Off</button>
+
+    <style>
+
+        div.bulb {
+            width: 350px;
+            height: 450px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            background-image: url(off.png);
+        }
+
+        .on {
+            background-image: url(on.png) !important;
+        }
+
+    </style>
+
+    <script>
+
+        var bulb = document.getElementById('bulb');
+        bulb.onclick = function () {
+            bulb.classList.toggle('on');
+        };
+
+        function BulbOn () {
+            bulb.classList.add('on');
+        }
+
+        function BulbOff () {
+            bulb.classList.remove('on');
+        }
+
+    </script>
+    
+</body>
+</html>

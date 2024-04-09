@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+    <div class="todo-app">
+        <header id="Header">
+            <h1>Todo List</h1>
+            <div class="add-task" id="addTaskBlock">
+                <img src="./images/add.svg" />
+                <p>Add Task</p>
+            </div>
+
+            <div class="input-box">
+                <div class="input">
+                    <input id="Title" type="text" placeholder="Title">
+                    <input id="Desc" type="text" placeholder="Description">
+                </div>
+                <div class="button">
+                    <button id="Cancel">Cancel</button>
+                    <button id="AddTask" class="addbtn">Add task</button>
+                </div>
+            </div>
+        </header>
+
+        <ul class="todo-list" id="TodoList">
+
+            <li>
+                <div class="radio"></div>
+                <div class="content">
+                    <h3>This is my task title</h3>
+                    <p>task description goes here</p>
+                </div>
+                <div class="action">
+                    <img src="./images/edit.svg" />
+                    <img src="./images/delete.svg" />
+                </div>
+            </li>
+
+            <li>
+                <div class="radio"></div>
+                <div class="content">
+                    <h3>This is my task title</h3>
+                    <p>task description goes here</p>
+                </div>
+                <div class="action">
+                    <img src="./images/edit.svg" />
+                    <img src="./images/delete.svg" />
+                </div>
+            </li>
+
+            <li>
+                <div class="radio"></div>
+                <div class="content">
+                    <h3>This is my task title</h3>
+                    <p>task description goes here</p>
+                </div>
+                <div class="action">
+                    <img src="./images/edit.svg" />
+                    <img src="./images/delete.svg" />
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="./scripts/script.js"></script>
+    
+</body>
+</html>

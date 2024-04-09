@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search String</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="search" placeholder="Search">
+        
+        <ul class="list" id="list">
+            <li><p>Arjun Kandel</p></li>
+            <li><p>Ashish Bhusal</p></li>
+            <li><p>Ashish Dhakal</p></li>
+            <li><p>Avaya Raj Poudel</p></li>
+            <li><p>Kabul Devkota</p></li>
+            <li><p>Nabin Pandey</p></li>
+            <li><p>Nikita Sharma</p></li>
+            <li><p>Shankar Aryal</p></li>
+        </ul>
+
+    </div>
+
+    <script>
+
+        var searchInput = document.getElementById('search');
+        var UList = document.getElementById('list');
+
+        var nodeList = UList.getElementsByTagName('p');
+
+        searchInput.addEventListener('keyup', function (e) {            
+            let query = searchInput.value;
+            query = query.toUpperCase();
+
+            for (let i = 0; i < nodeList.length; i++) {
+                let name = nodeList[i].innerText.toUpperCase();
+                if (name.includes(query)) {
+                    nodeList[i].parentElement.style.display = 'block';
+                }else {
+                    nodeList[i].parentElement.style.display = 'none';
+                }
+            }
+        });
+        
+        
+
+
+    </script>
+
+    <style>
+
+.container {
+    width: 420px;
+    height: auto;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+        input {
+    padding: 10px;
+}
+        ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+        ul li {padding: 5px;border-bottom: 1px solid #c3c3c3;}
+        ul li p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 14pt;
+}
+
+    </style>
+</body>
+</html>

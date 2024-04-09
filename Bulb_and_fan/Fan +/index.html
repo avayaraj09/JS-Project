@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="fan">
+            <img id="fan" class="fanImage" src="./fan.png" />
+        </div>
+
+        <ul class="buttons">
+            <li data-name="stop">Stop</li>
+            <li data-name="one">1</li>
+            <li data-name="two">2</li>
+            <li data-name="three">3</li>
+        </ul>
+    </div>
+
+    <style>
+         div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+        .fanImage {
+            animation-name: fananimation;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }
+
+        .stop {
+            animation-play-state: paused;
+        }
+
+        .one {
+            animation-duration: .7s;
+        }
+
+        .two {
+            animation-duration: .5s;
+        }
+
+        .three {
+            animation-duration: .3s;
+        }
+
+        @keyframes fananimation {
+            from { transform: rotate(0deg);}
+            to { transform: rotate(360deg);}
+        }
+
+        div.fan img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+        ul.buttons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+        ul.buttons li {
+    padding: 5px 20px;
+    border: 1px solid #abc;
+    border-radius: 7px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+    </style>
+
+<script src="./script.js"></script>
+</body>
+</html>

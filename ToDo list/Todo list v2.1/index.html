@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+</head>
+<body>
+
+    <div class="todo-app">
+        <header id="Header">
+            <div class="app-search">
+                <h1>Todo List</h1>
+                <img id="SearchBtn" src="./images/search.svg">
+                <div id="SearchBox" class="search-box">
+                    <input type="text" placeholder="Search" id="SearchTxt">
+                    <img id="CloseSearch" src="./images/close.svg" />
+                </div>
+            </div>
+
+            <div class="add-task" id="addTaskBlock">
+                <img src="./images/add.svg" />
+                <p>Add Task</p>
+            </div>
+
+            <div class="input-box">
+                <div class="input">
+                    <input id="Title" type="text" placeholder="Title">
+                    <input id="Desc" type="text" placeholder="Description">
+                </div>
+                <div class="button">
+                    <button id="Cancel">Cancel</button>
+                    <button id="AddTask" class="addbtn">Add task</button>
+                </div>
+            </div>
+        </header>
+
+        <ul class="todo-list" id="TodoList"></ul>
+
+        <div class="empty-task" id="EmptyTask">
+            <img src="./images/empty-task.svg" />
+            <p>You don't have task to do, you can add tasks here.</p>
+        </div>        
+
+    </div>
+
+    <script src="./scripts/App.js" type="module"></script>
+    
+</body>
+</html>

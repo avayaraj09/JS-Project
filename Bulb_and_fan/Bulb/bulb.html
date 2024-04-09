@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+        .buttons{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            height: 500px;
+            width: 300px;
+        }
+        button{
+            width: 100px;
+            padding: 10px;
+            border:none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 20px;
+            color: white;
+            background-color: red;
+        }
+       
+    </style>
+</head>
+<body>
+        <div class="buttons">
+            <img class="bulb" src="off.png" alt="">
+            <button id="btn1">On</button>
+        </div>
+     
+
+    <script>
+         var btn = document.querySelector('#btn1');
+         var pic = document.querySelector(".bulb");
+         let light = 0 ;
+         btn.addEventListener('click',function(){
+            if(light == 0){
+                btn.innerHTML = "OFF";
+                light = 1;
+                console.log("ON") 
+                pic.src = 'on.png';
+                
+            }
+            else{
+                btn.innerHTML = "ON";
+                light = 0;
+                 console.log("OFF") 
+                 pic.src = 'off.png';
+            }
+         })
+
+    </script>
+</body>
+</html>
